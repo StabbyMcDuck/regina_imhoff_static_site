@@ -15,6 +15,10 @@ body {
     background: url('../img/seamless_paper_texture.png') top left repeat;
 }
 
+html,body {
+    height: 100%;
+}
+
 /* ==== GLOBAL ==== */
 
 h1,h2,h3,h4,h5,h6 {
@@ -114,6 +118,10 @@ a.text-danger:hover {
 */
 
 
+.glyphicon-pencil, .glyphicon-cog, .glyphicon-education {
+    font-size: 75px;
+}
+
 .modal-content{
     background: url('../img/seamless_paper_texture.png') top left repeat;
 }
@@ -141,6 +149,18 @@ a.text-danger:hover {
     background: #007bb6;
 }
 
+.badge.social.instagram:hover {
+    background: #125688;
+}
+
+.badge.social.pinterest:hover {
+    background: #cb2027;
+}
+
+.badge.social.github:hover {
+    background: black;
+}
+
 .badge.social.envelope:hover {
     background: #c7254e;
 }
@@ -148,16 +168,6 @@ a.text-danger:hover {
 #highlight {
     color: #a9962f;
 }
-
-/* === CUSTOM ICON SPRITES === */
-
-
-.ci.ci-computer 	{ background-position: 0 0; }
-.ci.ci-watch		{ background-position: -40px 0; }
-.ci.ci-calendar		{ background-position: -80px 0; }
-.ci.ci-community	{ background-position: -120px 0; }
-.ci.ci-instructor	{ background-position: -160px 0; }
-.ci.ci-device		{ background-position: -200px 0; }
 
 
 /* ==== HERO ==== */
@@ -230,16 +240,26 @@ a.text-danger:hover {
     color: #a9962f;
 }
 
+.twitter-timeline {
+    height: 300px;
+}
+
+
 /* === FOOTER === */
-footer {
+.footer{
     background: url('../img/binding_dark.png') top left repeat;
     margin-top: 33px;
     padding: 33px 33px 33px 33px;
     color: #a9962f;
     text-align: center;
+    width: 100%;
+    position: relative;
+    clear: both;
+    bottom: 0;
+    left: 0;
 }
 
-footer.h3 {
+.footer.h3 {
     text-align: right;
     top: -50px;
 }
@@ -269,10 +289,13 @@ footer.h3 {
     margin-top: 30px;
 }
 
-.post, .widget, #comments {
+.top-widget {
+    margin-top: 25px;
+}
+
+.post, .page, .widget, #comments {
     position: relative;
     border: solid 1px #ddd;
-    background: white;
     margin: 0 0 40px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -291,6 +314,7 @@ footer.h3 {
     padding: 0 0 15px;
     border-bottom: solid 1px #ddd;
 }
+
 
 .post header h1 {
     margin: 0 0 15px;
@@ -316,6 +340,49 @@ footer.h3 {
     padding: 0;
 }
 
+
+.page header,
+.page .page-excerpt,
+.page .page-body,
+#comments .comments-wrap {
+    padding: 20px;
+}
+
+.page header h3 {
+    margin: 0 0 15px;
+    padding: 0 0 15px;
+    border-bottom: solid 1px #ddd;
+}
+
+
+.page header h1 {
+    margin: 0 0 15px;
+    padding: 0 0 15px;
+    border-bottom: solid 1px #ddd;
+    font-size: 24px;
+}
+
+.page-header {
+    height: 300px;
+    display: table;
+    width: 100%;
+    padding: 0px 0;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    background: url('../img/binding_dark.png') top left repeat;
+}
+
+.page-header article {
+    width: 100%;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.page-header .hero-text {
+    margin-top: 30px;
+}
 /* === COMMENTS === */
 
 .post-comments-badge {
@@ -388,7 +455,20 @@ footer.h3 {
     border-top: solid 1px #eee;
 }
 
-/* === RESOURCES === */
+.post h3 {
+    color: black;
+}
+
+/* === PAGES === */
+
+#page-content {
+    width: 55%;
+}
+
+/* ==== RESOURCES === */
+.main-content {
+    margin-top: 20px;
+}
 
 .resource {
     width: 31.33333333%;
@@ -398,33 +478,6 @@ footer.h3 {
 
 .resource:nth-child(3n) {
     margin-right: 0;
-}
-
-/* === WIDGETS === */
-
-.widget {
-    padding: 20px;
-}
-
-.widget h4 {
-    margin: 0 0 10px;
-    padding: 0 0 10px;
-    border-bottom: solid 1px #ddd;
-}
-
-.widget ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.widget ul li {
-    margin: 0 0 5px;
-}
-
-.widget ul li:hover {
-    position: relative;
-    left: 1px;
 }
 
 /* ==== MEDIA QUERIES ==== */
@@ -438,7 +491,7 @@ footer.h3 {
 
 @media screen and (max-width : 768px) {
     .logo {
-        width: 40%%;
+        width: 40%;
     }
 
     #optin p {
